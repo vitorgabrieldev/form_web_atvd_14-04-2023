@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>MinMaxCode</title>    
+
+    <!-- Require Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./app.css">
+
+    <!-- Scripts -->
+    <script src="./app.js" defer></script>
+
+</head>
+<body>
+    <div class="cardForm hidden">
+        <i class='bx bx-error'></i>
+        <br>
+        <h1 class="cardForm__title">Error</h1>
+        <h3 class="description__card"></h3>
+        <br><br>
+        <i id="hiddenCard" class='bx bx-x'></i>
+    </div>
+    <!-- Container Header -->
+    <header class="header__container">
+        <h1 class="text__title">MinMaxCode</h1>
+        <div class="icon__buttons">
+            <!-- Icons Functions -->
+            <i class='bx bxs-help-circle'></i>
+        </div>
+    </header>
+    <!-- Container Main Form -->
+    <main class="main__container">
+            <!-- Form  -->
+            <form id="form__element" method="post">
+                <div class="content__infoForm">
+                    <h1 class="form__title">Criar seu cadastro</h1>
+                    <h3 class="description__form">Veja seus pedidos de forma fácil, compre mais rápido e tenha uma experiência personalizada :)</h3>
+                    <h1 class="mandatory__title">
+                        <strong class="mandatory__icon">*</strong>
+                        Campos obrigatórios
+                    </h1>
+                </div>
+                <br>
+                <label class="titleLabel" for="inputName">
+                    <strong class="mandatory__icon">*</strong>
+                    Nome Completo
+                </label>
+                <input class="inputElement" type="text" id="inputName">
+                <br><br>
+                <label class="titleLabel" for="inputTell">
+                    <strong class="mandatory__icon">*</strong>
+                    Telefone
+                </label>
+                <input class="inputElement" type="number" id="inputTell">
+                <br><br>
+                <label class="titleLabel" for="inputDN">
+                    <strong class="mandatory__icon">*</strong>
+                    Data de Nascimento
+                </label>
+                <input class="inputElement" type="date" id="inputDN" name="inputDN">
+                <br><br>
+                <label class="titleLabel" for="inputCPF">
+                    <strong class="mandatory__icon">*</strong>
+                    CPF
+                </label>
+                <input class="inputElement" type="number" placeholder="13770078985" id="inputCPF" name="inputCPF">
+                <br><br><hr>
+                <div class="containerInsent__form">
+                    <h3 class="titleinset__form">
+                        Endereço
+                    </h3>
+                    <div class="containerInsent__end">
+                        <label class="titleLabel" for="inputCEP">
+                            <strong class="mandatory__icon">*</strong>
+                            Cep
+                        </label>
+                        <input class="inputElement" type="text" placeholder="36036340" id="inputCEP">
+                        <label class="titleLabel" for="inputBairro">
+                            <strong class="mandatory__icon">*</strong>
+                            Bairro/Conjunto
+                        </label>
+                        <input class="inputElement" type="text" id="inputBairro">
+                        <br><br>
+                        <label class="titleLabel" for="inputRua">
+                            <strong class="mandatory__icon">*</strong>
+                            Rua
+                        </label>
+                        <input class="inputElement" type="text" id="inputRua">
+                        <label class="titleLabel" for="inputNum">
+                            <strong class="mandatory__icon">*</strong>
+                            Número
+                        </label>
+                        <input class="inputElement" type="number" id="inputNum">
+                    </div>
+                </div>
+                <br><br><hr>
+                <label class="titleLabel" for="inputEmail">
+                    <strong class="mandatory__icon">*</strong>
+                    E-mail
+                </label>
+                <input class="inputElement" type="text" id="inputEmail" name="inputEmail">
+                <br><br>
+                <div class="container__password">
+                    <label class="titleLabel" for="inputPassword">
+                        <strong class="mandatory__icon">*</strong>
+                        Senha
+                    </label>
+                    <input class="inputElement" type="password" id="inputPassword">
+                    <i id="typePassView" class='bx bx-low-vision'></i>
+                </div>
+                <br><br>
+                <button type="button" id="btnSendForm">Criar seu cadastro</button>
+                <h3 class="decorationPage">Não se preocupe, nosso site é seguro! Ao criar o seu cadastro,<br> você concorda com a nossa <a href="#" class="link__decoration">política de privacidade</a></h3>
+                <br><br>
+                <h3 class="decorationPage">Já tem cadastro? <a href="#" class="link__decoration">entrar</a></h3>
+            </form>
+    </main>
+</body>
+</html>
+
+
+<!-- Email
+Data de Nascimento
+CPF
+Endereço (Completo) -->
