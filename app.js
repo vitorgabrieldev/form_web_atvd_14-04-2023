@@ -16,9 +16,9 @@ const nameInputs = [
 var verifyForm = {
     verifyDATA: function() {
         let DATA = this.request_data();
-        if(DATA.nome&&DATA.tell&&DATA.DN&&DATA.CPF&&DATA.CEP&&DATA.bairro&&DATA.rua&&DATA.num&&DATA.email&&DATA.senha) {
+        if(DATA.senhaAgain&&DATA.nome&&DATA.tell&&DATA.DN&&DATA.CPF&&DATA.CEP&&DATA.bairro&&DATA.rua&&DATA.num&&DATA.email&&DATA.senha) {
             let verifyEmail_request = this.verify_email(DATA.email);
-            let verifyPassword_request = this.verify_password(DATA.senha);
+            let verifyPassword_request = this.verify_password(DATA.senha, DATA.senhaAgain);
             if(verifyEmail_request == 1&&verifyPassword_request == 1) {
                 alert('você foi cadastrado com sucesso!');
             };
@@ -74,14 +74,14 @@ var verifyForm = {
             rua: document.querySelector('#inputRua').value,
             num: document.querySelector('#inputNum').value,
             email: document.querySelector('#inputEmail').value,
-            senha: document.querySelector('#inputPassword').value
+            senha: document.querySelector('#inputPassword').value,
+            senhaAgain: document.querySelector('#inputPasswordAgain').value
         };
         return DATA;
     },
 
 
     // Verify Datas
-
     verify_email: function(data) {
         let pattern = /@/;
         if(pattern.test(data) == true) {
@@ -91,9 +91,15 @@ var verifyForm = {
             return 0;
         };
     },
-    verify_password: function(data) {
-        if(data.length >= 8) {
-            return 1;
+    verify_password: function(data1, data2) {
+        if(data1.length >= 8) {
+            if(data1 === data2) {
+                return 1;
+            } else {
+            hiddenShow.show("As senha não são igual!");
+                return 0;
+            };
+            // return 1;
         } else {
             hiddenShow.show("A senha deve conter acima ou 8 digitos!");
             return 0;
