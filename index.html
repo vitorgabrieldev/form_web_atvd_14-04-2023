@@ -1,139 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 
-    <title>MinMaxCode</title>    
+    <title>Cadastra-se</title>    
 
-    <!-- Require Meta Tags -->
+    <!-- | -- Require_Meta_Tags -- | -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Import Icons -->
+    <!-- | -- Import_Icons -- | -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
-    <!-- Style Sheets -->
+    <!-- | -- Style_Sheets -- | -->
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./app.css">
 
-    <!-- Scripts -->
+    <!-- | -- Scripts -- | -->
     <script src="./app.js" defer></script>
+    <script src="./controls.js" defer></script>
 
 </head>
 <body>
-    <div class="cardForm hidden">
-        <i class='bx bx-error'></i>
-        <br>
-        <h1 class="cardForm__title">Error</h1>
-        <h3 class="description__card"></h3>
-        <br><br>
-        <i id="hiddenCard" class='bx bx-x'></i>
-    </div>
-    <!-- Container Header -->
-    <header class="header__container">
-        <h1 class="text__title">MinMaxCode</h1>
-        <div class="icon__buttons">
-            <!-- Icons Functions -->
-            <i class='bx bxs-help-circle'></i>
-        </div>
-    </header>
-    <!-- Container Main Form -->
-    <main class="main__container">
-            <!-- Form  -->
-            <form id="form__element" method="post">
-                <div class="content__infoForm">
-                    <h1 class="form__title">Criar seu cadastro</h1>
-                    <h3 class="description__form">Veja seus pedidos de forma fácil, compre mais rápido e tenha uma experiência personalizada :)</h3>
-                    <h1 class="mandatory__title">
-                        <strong class="mandatory__icon">*</strong>
-                        Campos obrigatórios
-                    </h1>
-                </div>
-                <br>
-                <label class="titleLabel" for="inputName">
-                    <strong class="mandatory__icon">*</strong>
-                    Nome Completo
-                </label>
-                <input class="inputElement" type="text" id="inputName">
-                <br><br>
-                <label class="titleLabel" for="inputTell">
-                    <strong class="mandatory__icon">*</strong>
-                    Telefone
-                </label>
-                <input class="inputElement" type="number" id="inputTell">
-                <br><br>
-                <label class="titleLabel" for="inputDN">
-                    <strong class="mandatory__icon">*</strong>
-                    Data de Nascimento
-                </label>
-                <input class="inputElement" type="date" id="inputDN" name="inputDN">
-                <br><br>
-                <label class="titleLabel" for="inputCPF">
-                    <strong class="mandatory__icon">*</strong>
-                    CPF
-                </label>
-                <input class="inputElement" type="number" placeholder="13770078985" id="inputCPF" name="inputCPF">
-                <br><br><hr>
-                <div class="containerInsent__form">
-                    <h3 class="titleinset__form">
-                        Endereço
-                    </h3>
-                    <div class="containerInsent__end">
-                        <label class="titleLabel" for="inputCEP">
-                            <strong class="mandatory__icon">*</strong>
-                            Cep
-                        </label>
-                        <input class="inputElement" type="text" placeholder="36036340" id="inputCEP">
-                        <label class="titleLabel" for="inputBairro">
-                            <strong class="mandatory__icon">*</strong>
-                            Bairro/Conjunto
-                        </label>
-                        <input class="inputElement" type="text" id="inputBairro">
-                        <br><br>
-                        <label class="titleLabel" for="inputRua">
-                            <strong class="mandatory__icon">*</strong>
-                            Rua
-                        </label>
-                        <input class="inputElement" type="text" id="inputRua">
-                        <label class="titleLabel" for="inputNum">
-                            <strong class="mandatory__icon">*</strong>
-                            Número
-                        </label>
-                        <input class="inputElement" type="number" id="inputNum">
+    <!-- | -- Components -- | -->
+    <main class="container__main">
+        <section class="container__cards">
+            <div class="contaniner__Content container1">
+                <header class="header__container1">
+                    <br><br>
+                    <i class='bx bxs-shopping-bags'></i>
+                    <h1 class="titleContainer1">MinMaxCode - <span class="firstLetter">S</span>hop</h1><br>
+                    <p class="descriptionTite__Container1">Take advantage of new offers every day,<br> so as not to weigh on your pocket.</p>
+                </header>
+                <footer class="footer__container1">
+                    <p class="descriptionFooter__Container1">
+                        Veja como usamos seus dados <a href="#">Politica de uso</a>
+                    </p>
+                </footer>
+            </div>
+            <div class="contaniner__Content container2">
+                <form id="containerForm" class="hidden show">
+                    <h1 class="titleForm">Create an Account</h1>
+                    <input type="email" placeholder="Email" id="inputEmail" class="inputsStyle" name="email" title="Digite seu email">
+                    <input type="text" placeholder="FullName" id="inputFullName" class="inputsStyle" name="fullName" title="Digite seu nome completo">
+                    <input type="tel" placeholder="Telephone ex.(00)0000-00000" id="inputTell" class="inputsStyle" name="tell" title="Digite seu telefone">
+                    <div class="inputPasswords">
+                        <input type="password" placeholder="Password" id="inputPass" class="inputsStyle inputPass" name="password" title="Digite sua senha">
+                        <i id="hiddenAndShow1" class="bi bi-eye-fill"></i>
                     </div>
-                </div>
-                <br><br><hr>
-                <label class="titleLabel" for="inputEmail">
-                    <strong class="mandatory__icon">*</strong>
-                    E-mail
-                </label>
-                <input class="inputElement" type="text" id="inputEmail" name="inputEmail">
-                <br><br>
-                <div class="container__password">
-                    <label class="titleLabel" for="inputPassword">
-                        <strong class="mandatory__icon">*</strong>
-                        Senha
-                    </label>
-                    <input class="inputElement" type="password" id="inputPassword">
-                    <i id="typePassView" class='bx bx-low-vision'></i>
-                    <label class="titleLabel" for="inputPassword">
-                        <strong class="mandatory__icon">*</strong>
-                        Repetir senha
-                    </label>
-                    <input class="inputElement" type="password" id="inputPasswordAgain">
-                </div>
-                <br><br>
-                <button type="button" id="btnSendForm">Criar seu cadastro</button>
-                <h3 class="decorationPage">Não se preocupe, nosso site é seguro! Ao criar o seu cadastro,<br> você concorda com a nossa <a href="#" class="link__decoration">política de privacidade</a></h3>
-                <br><br>
-                <h3 class="decorationPage">Já tem cadastro? <a href="#" class="link__decoration">entrar</a></h3>
-            </form>
+                    <div class="inputPasswords">
+                        <input type="password" placeholder="Repeat Password" id="inputRP" class="inputsStyle inputPass" name="passAgain" title="Repita sua senha">
+                        <i id="hiddenAndShow2" class="bi bi-eye-fill"></i>
+                    </div>
+                    <button type="submit" id="buttonNext">
+                        Next
+                        <i class='bx bx-right-arrow-alt icon'></i>
+                    </button>
+                </form>
+                <form id="containerForm2" class="hidden">
+                    <input type="date" id="inputDataDeNascimento" class="inputsStyle" name="data_de_nascimento" title="Selecione sua data de nascimento">
+                    <input type="number" placeholder="Cpf ex.00000000000" id="inputCpf" class="inputsStyle" name="Cpf" title="Digite seu CPF">
+                    <input type="number" placeholder="Cep" id="inputCep" class="inputsStyle" name="Cep" title="Digite seu Cep">
+                    <input type="text" placeholder="Cidade" id="inputCidade" class="inputsStyle" name="Cidade" title="Digite sua cidade">
+                    <input type="text" placeholder="Logradouro" id="inputRua" class="inputsStyle" name="Rua" title="Digite sua rua">
+                    <input type="text" placeholder="Número/complemento (Opcional)" id="inputNum" class="inputsStyle" name="numero" title="Digite número de sua residência">
+                    <button type="submit" id="buttonNext2">
+                        Register
+                        <i class='bx bx-right-arrow-alt icon'></i>
+                    </button>
+                </form>
+            </div>
+        </section>
     </main>
 </body>
 </html>
-
-
-<!-- Email
-Data de Nascimento
-CPF
-Endereço (Completo) -->

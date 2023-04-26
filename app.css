@@ -6,140 +6,155 @@ body, html {
 * {
     font-family: 'K2D', sans-serif;
 }
-.header__container {
+.container__main {
+    position: absolute;
     width: 100%;
-    height: 10%;
-    background: rgb(18, 17, 17);
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
-.header__container > * {
-    color: #fefefe;
+.container__cards {
+    background: rgb(238, 237, 237);
+    box-shadow: 5px 5px 12px #888;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
 }
-.text__title {
-    font-size: 2.4rem;
+.contaniner__Content {
+    width: 50%;
+    height: 100%;
+}
+.container1 {
+    background: rgb(240, 240, 240);
+    border-right: 1px solid rgba(205, 203, 203, 0.56);
+}
+.container2 {
+    background: linear-gradient(90deg, rgb(240, 240, 240),#c5c5c5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__container1 {
+    text-align: center;
+}
+.header__container1 > i {
+    font-size: 7rem;
+    color: #707070;
     user-select: none;
 }
-.icon__buttons {
-    display: flex;
-    gap: 2rem;
-    padding: .5rem;
-    border-radius: 8px;
+.titleContainer1 {
+    font-size: 3rem;
 }
-.icon__buttons > i {
-    font-size: 2rem;
-    cursor: pointer;
+.titleContainer1::first-letter {
+    font-size: 4rem;
+    color: #fe74b2;
 }
-.icon__buttons > i:hover {
-    transform: scale(1.1);
-    transition: .33s;
+.firstLetter {
+    font-size: 4rem;
+    color: #fe74b2;
 }
-.main__container {
+.descriptionTite__Container1 {
+    font-size: 1.7rem;
+    color: rgb(126, 126, 126);
+    user-select: none;
+}
+.footer__container1 {
+    position: absolute;
+    bottom: 1.2rem;
+    width: 45%;
+    text-align: center;
+}
+.descriptionFooter__Container1 {
+    user-select: none;
+    font-size: 1.5rem;
+}
+.descriptionFooter__Container1 > a {
+    color: rgb(105, 104, 104);
+}
+
+/* -- | -- Form Style -- | -- */
+#containerForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-items: center;
+}
+#containerForm2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-items: center;
+}
+.inputsStyle {
     width: 100%;
-    text-align: center;
+    border: 1px solid rgb(144, 143, 143);
+    background: transparent;
+    outline: none;
+    padding: .5rem 2rem;
+    font-size: 1.6rem;
 }
-
-.mandatory__icon {
-    color: red;
-}
-
-.form__title {
-    font-size: 2.3rem;
-}
-.description__form {
-    font-size: 1.3rem;
-    color: #212020;
-}
-.mandatory__title {
-    font-size: 1.1rem;
-}
-.content__infoForm {
-    background: rgb(49, 48, 48);
-    padding: .3rem 0 .3rem 0;
-}
-.content__infoForm > * {
-    color: #fefefe;
-}
-.titleLabel {
-    font-size: 1.4rem;
-}
-.inputElement {
+#buttonNext,
+#buttonNext2 {
+    background: linear-gradient(45deg, #fe74b2, #f89ac4, #fe74b2);
     border: none;
-    border: 1px solid #000;
-    padding: .2rem;
+    font-size: 2rem;
     text-align: center;
-    font-size: 1.4rem;
-}
-.titleinset__form {
-    font-size: 1.4rem;
-}
-.container__password {
+    padding: .5rem 4rem;
+    color: #fefefe;
+    transition: .11s;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: .4rem;
+    gap: 2rem;
 }
-.bx-low-vision {
-    font-size: 2rem;
-    color: #2c2c2c;
-    cursor: pointer;
-}
-#btnSendForm {
-    width: 40%;
-    height: 4rem;
-    border: none;
-    background: #f80032;
-    border-radius: 5px;
+#buttonNext:hover,
+#buttonNext2:hover {
+    transform: scale(.98);
+    padding: .5rem 6rem;
+    background: #000;
     color: #fefefe;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: .33s;
 }
-#btnSendForm:hover {
-    transform: scale(1.1);
-}
-.decorationPage {
-    color: #2b2b2b;
-}
-.link__decoration {
-    color: #6c6c6c;
-}
-.link__decoration:hover {
-    transition: .33s;
-    color: rgb(65, 65, 204);
-}
-.cardForm {
-    position: absolute;
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgb(243, 242, 242);
-    border: 2px solid #000;
-    border-radius: 12px;
-    text-align: center;
-    padding: 2rem 2rem 2rem 2rem;
-}
-.cardForm > i:first-child {
-    font-size: 3rem;
-    color: rgb(235, 11, 11);
-}
-.cardForm > i:last-child {
-    font-size: 3rem;
-    border: 2px solid #000;
-    border-radius: 8px;
-    transition: .33s;
-    cursor: pointer;
-}
-.cardForm > i:last-child:hover {
-    transform: scale(1.1);
-    background: #ff010126;
-    color: #222020;
-}
-.hidden {
+.icon {
     display: none;
 }
-.border_red {
-    border: 1px solid rgb(255, 1, 1);
-    border-radius: 5px;
+#buttonNext:hover > .icon,
+#buttonNext:hover > .icon {
+    display: flex;
+}
+.titleForm {
+    font-size: 3rem;
+    color: rgb(133, 129, 129);
+}
+.titleForm::first-letter {
+    font-size: 4rem;
+    color: #fe74b2;
+}
+.inputPasswords {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% + 2rem);
+    border: 1px solid rgb(144, 143, 143);
+    padding-right: 2rem;
+}
+.inputPasswords > i {
+    font-size: 1.5rem;
+    color: #464646;
+    cursor: pointer;
+    transition: .33s;
+}
+.inputPass {
+    width: 70%;
+    border: none;
+}
+.inputPasswords > i:hover {
+    transform: scale(1.1);
+}
+.hidden {
+    display: none !important;
+}
+.show {
+    display: grid !important;
 }
