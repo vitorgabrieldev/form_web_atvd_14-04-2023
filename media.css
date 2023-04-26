@@ -1,0 +1,58 @@
+@media screen and (max-width: 1150px) {
+    .contaniner__Content:first-child  {
+        width: 40%;
+    }
+    .contaniner__Content:last-child {
+        width: 60%;
+    }
+    .descriptionFooter__Container1 {
+        font-size: 1.2rem;
+    }
+    .footer__container1 {
+        width: 40%;
+        text-align: flex;
+        justify-content: center;
+    }
+    .titleContainer1 {
+        font-size: 2.4rem;
+    }
+    .descriptionTite__Container1 {
+        font-size: 1.5rem;
+    }
+    .mediaStyle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .inputsStyle {
+        font-size: 1.4rem;
+        width: 90%;
+    } 
+    .inputPasswords {
+        width: 98%;
+    }
+}
+@media screen and (max-width: 830px) {
+    .container__cards {
+        background: none;
+        box-shadow: none;
+        display: flex;
+        justify-content: center;
+    }
+    .container1 {
+        display: none;
+    }
+    .container2 {
+        position: absolute;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 770px) {
+    .container2 {
+        background: none;
+    }
+    .titleForm {
+        font-size: 2rem;
+    }
+}
