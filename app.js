@@ -1,12 +1,12 @@
 document.querySelector('#containerForm').addEventListener('submit', (event) => {
-    event.preventDefault(); // Constumo só não usar o type="Submit" no button ;-;
+    event.preventDefault();
     requestDatas();
 });
 
 
 const requestDatas = () => {
     let data = responseData();
-    if(data.email&&data.fullName&&data.tell&&data.againPassword&&data.password) {
+    if(data.email&&data.fullName&&data.againPassword&&data.password) {
         verifyDatas(data);
     } else alert('Preencha todos os campos!');
 };
@@ -15,7 +15,6 @@ const responseData = () => {
     let objectData = {
         'email': document.querySelector('#inputEmail').value,
         'fullName': document.querySelector('#inputFullName').value,
-        'tell': document.querySelector('#inputTell').value,
         'password': document.querySelector('#inputPass').value,
         'againPassword': document.querySelector('#inputRP').value,
     };
@@ -27,9 +26,8 @@ const verifyDatas = (data) => {
     let validEmail = verifyEmail(data.email);
     let validPasswords = validPassword(data.password,data.againPassword);
     let validName = globalThis.validName(data.fullName); 
-    let validTell = globalThis.validTell(data.tell);
 
-    if (validEmail == true && validPasswords == true && validName == true && validTell == true) {
+    if (validEmail == true && validPasswords == true && validName == true) {
         document.querySelector('#containerForm').classList.remove("show");
         document.querySelector('#containerForm2').classList.remove("hidden");
     } else {
@@ -38,7 +36,7 @@ const verifyDatas = (data) => {
 };
 
 const verifyEmail = (email) => {
-    // var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+    var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
     var re = /\S+@\S+\.\S+/;
     return re.test(email);    
 };
@@ -58,15 +56,6 @@ function validName(name) {
         if (regex.test(name) != true) { return true; } else alert('Digite seu nome corretamente!');
     } else {
         alert('Digite seu nome completo!');
-    };
-};
-
-function validTell(tell) {
-    if (tell.length == 14) {
-        var regex = new RegExp('^\\([0-9]{2}\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{3}-[0-9]{5}))$');
-        if (regex.test(tell)) { return true } else console.log("Digite um telefone válido!");
-    } else {
-        alert('Digite um telefone válido!');
     };
 };
 
